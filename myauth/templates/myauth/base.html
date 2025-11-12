@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>ChatWave</title>
+
+    <!-- Подключаем CSS чата -->
+    <link rel="stylesheet" href="{% static 'mychat/style.css' %}?v=1">
+    
+    <!-- Можно добавить блок head для дополнительных стилей/мета -->
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <!-- Навигация -->
+    <nav>
+        <a href="{% url 'mychat:room_list' %}">Комнаты</a> |
+        <a href="{% url 'logout' %}">Выйти</a>
+    </nav>
+
+    <!-- Основной контент страницы -->
+    {% block content %}{% endblock %}
+
+    <!-- Можно подключить JS -->
+    {% block scripts %}{% endblock %}
+</body>
+</html>

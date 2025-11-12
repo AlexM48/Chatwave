@@ -1,0 +1,20 @@
+{% extends "mychat/base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="create-room-wrapper">
+    <div class="create-room-header">
+        <a href="{% url 'mychat:room_list' %}">назад к списку комнат</a>
+        <a href="{% url 'logout' %}">выйти</a>
+    </div>
+
+    <h1>Создать комнату</h1>
+
+    <form method="post" class="create-room-form">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="введите название комнаты" required>
+        <br>
+        <button type="submit">Создать</button>
+    </form>
+</div>
+{% endblock %}

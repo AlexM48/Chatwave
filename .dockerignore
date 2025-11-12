@@ -1,0 +1,50 @@
+# ===============================
+# Python / Django
+# ===============================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.db
+
+# ===============================
+# Virtual environment
+# ===============================
+venv/
+.env/
+*.env
+.env
+
+
+# ===============================
+# Logs and media
+# ===============================
+*.log
+logs/
+media/
+staticfiles/
+
+# ===============================
+# Git & Editor files
+# ===============================
+.git/
+.gitignore
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ===============================
+# Docker and local stuff
+# ===============================
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# ===============================
+# OS / Cache files
+# ===============================
+.DS_Store
+Thumbs.db
+__MACOSX/

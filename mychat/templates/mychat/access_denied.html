@@ -1,0 +1,8 @@
+{% extends "mychat/base.html" %}
+{% block content %}
+<div style="padding: 30px; text-align: center;">
+    <h2 style="color: red;">⛔ Доступ запрещён</h2>
+    <p>Эта комната заблокирована, и у вас нет разрешения на вход.</p>
+    <a href="{% url 'mychat:room_list' %}" class="back-btn">← Вернуться к списку комнат</a>
+</div>
+{% endblock %}

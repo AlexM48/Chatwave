@@ -1,0 +1,32 @@
+{% extends "mychat/base.html" %}
+
+{% block content %}
+<h2>Управление доступом к комнате: "{{ room.name }}"</h2>
+
+<form method="post">
+    {% csrf_token %}
+
+    <p>
+        <label>
+            <input type="checkbox" name="lock_room" {% if room.is_locked %}checked{% endif %}>
+            Комната заблокирована
+        </label>
+    </p>
+
+    <h3>Пользователи:</h3>
+    <div style="margin-bottom: 15px;">
+        {% for user in users %}
+            <label>
+                <input type="checkbox" name="users" value="{{ user.id }}"
+                    {% if user in allowed_users %}checked{% endif %}>
+                {{ user.username }}
+            </label><br>
+        {% endfor %}
+    </div>
+
+    <button type="submit" style="background:#5a32a3; color:white;">Сохранить изменения</button>
+</form>
+
+<br>
+<a href="{% url 'mychat:room_list' %}">← Назад к списку комнат</a>
+{% endblock %}

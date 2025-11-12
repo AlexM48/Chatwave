@@ -1,0 +1,101 @@
+{% extends "mychat/base.html" %}
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'mychat/style.css' %}?v=3">
+<script defer src="{% static 'mychat/js/room.js' %}?v=3"></script>
+
+<div class="chat-wrapper">
+    <!-- === Левая панель === -->
+    <div class="chat-sidebar">
+        <a class="back-btn" href="{% url 'mychat:room_list' %}">назад к списку комнат</a>
+
+        <div class="room-title">Комната: {{ room.name }}</div>
+
+        <div class="sidebar-block">
+            <div class="sidebar-label">Участники:</div>
+            <div class="sidebar-users">
+                {% if users %}
+                    {% for u in users %}
+                        <div class="user-item">{{ u.username }}</div>
+                    {% endfor %}
+                {% else %}
+                    <div class="user-item empty">нет участников</div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="sidebar-block">
+            <div class="sidebar-label">Количество сообщений:</div>
+            <div id="message-count">{{ messages_count }}</div>
+        </div>
+    </div>
+
+    <!-- === Правая часть — чат === -->
+    <div class="chat-container">
+        <div id="messages-area" class="messages-area">
+            {% for msg in messages %}
+                <div id="message-{{ msg.id }}" 
+                     class="message
+                        {% if msg.user == request.user %} self-msg
+                        {% elif msg.user.is_superuser %} admin-msg
+                        {% else %} user-msg {% endif %}"
+                     data-username="{{ msg.user.username }}"
+                     data-message-id="{{ msg.id }}"
+                >
+                    <div class="msg-header">
+                        <span class="msg-username">{{ msg.user.username }}</span>
+                    </div>
+
+                    {% if msg.content %}
+                        <div class="msg-text">{{ msg.content }}</div>
+                    {% endif %}
+
+                    {% if msg.image %}
+                        <div class="msg-image">
+                            <img src="{{ msg.image.url }}" class="chat-photo" alt="image">
+                        </div>
+                    {% endif %}
+
+                    {% if msg.video %}
+                        <div class="msg-video">
+                            <video class="chat-video" controls preload="metadata">
+                                <source src="{{ msg.video.url }}" type="video/mp4">
+                            </video>
+                        </div>
+                    {% endif %}
+
+                    {% if can_delete_messages %}
+                        <button class="msg-delete-btn" data-id="{{ msg.id }}">×</button>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+
+        <!-- === Поле ввода сообщения === -->
+        <form id="chat-form" class="chat-input-block" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input id="chat-input" name="content" type="text" class="chat-input" placeholder="Введите сообщение...">
+            
+            <label class="chat-file-label">
+                <input id="chat-media" name="media" type="file" class="chat-file">
+                📎
+            </label>
+
+            <button type="submit" class="chat-send-btn">Отправить</button>
+        </form>
+    </div>
+</div>
+
+{% if error_message %}
+    <div class="error-message" style="color: red; margin-bottom: 1em;">
+        {{ error_message }}
+    </div>
+{% endif %}
+
+<!-- === Скрытые элементы === -->
+<div id="can_delete_messages" hidden>{{ can_delete_messages|lower }}</div>
+<div id="current_username" hidden>{{ request.user.username }}</div>
+
+{% endblock %}

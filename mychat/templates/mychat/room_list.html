@@ -1,0 +1,39 @@
+{% extends "mychat/base.html" %}
+{% load dict_extras %}
+
+{% block content %}
+<div class="room-list-wrapper">
+    <div class="animated-title">
+        <h1>Список комнат</h1>
+    </div>
+
+    <ul class="room-list">
+        {% for room in rooms %}
+            <li class="room-item {% if room_access|get_item:room.id %}active{% else %}inactive{% endif %}">
+                {% if room_access|get_item:room.id %}
+                    <a href="{% url 'mychat:room_detail' room.id %}" class="room-link open">
+                        {{ room.name }}
+                    </a>
+                {% else %}
+                    <span class="room-link closed">
+                        {{ room.name }} (нет доступа)
+                    </span>
+                {% endif %}
+
+                {% if request.user.is_staff or request.user.is_superuser %}
+                    <div class="room-actions">
+                        <a href="{% url 'mychat:manage_access' room.id %}" class="access-link">[Управление доступом]</a>
+                        <a href="{% url 'mychat:delete_room' room.id %}" class="delete-link">[Удалить]</a>
+                    </div>
+                {% endif %}
+            </li>
+        {% empty %}
+            <li class="empty-room">Пока нет комнат</li>
+        {% endfor %}
+    </ul>
+
+    <div class="create-room-form">
+        <a href="{% url 'mychat:create_room' %}" class="btn-create">Создать комнату</a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,9 @@
+<h1>Регистрация</h1>
+<form method="post">
+    {% csrf_token %}
+    <p><input type="text" name="username" placeholder="Имя пользователя"></p>
+    <p><input type="password" name="password" placeholder="Пароль"></p>
+    <p><input type="password" name="password2" placeholder="Повторите пароль"></p>
+    <button type="submit">Зарегистрироваться</button>
+</form>
+<a href="{% url 'login' %}">Войти</a>

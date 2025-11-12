@@ -1,0 +1,14 @@
+{% for msg in messages %}
+<div class="message" data-id="{{ msg.id }}">
+    <strong>{{ msg.user.username }}:</strong> {{ msg.content }}
+    <em style="font-size: 0.8em; color: #555;">
+        ({{ msg.created_at|date:"H:i d-m-Y" }})
+    </em>
+    {% if user.is_staff or user.is_superuser %}
+    <form method="post" action="{% url 'mychat:delete_message' msg.id %}" class="delete-message-form" style="display:inline;">
+        {% csrf_token %}
+        <button type="submit" style="font-size:0.8em; color:red; background:none; border:none; cursor:pointer;">[удалить]</button>
+    </form>
+    {% endif %}
+</div>
+{% endfor %}
