@@ -27,17 +27,18 @@ COPY requirements.txt /app/requirements.txt
 # Устанавливаем зависимости
 RUN pip install --upgrade pip && pip install -r /app/requirements.txt
 
+# --- Создаём пользователя ДО chown ---
+RUN useradd --create-home --shell /bin/bash appuser
+
 # Копируем проект в контейнер
 COPY . /app
 
 # Создаём папку logs и файлы логов, чтобы Django не падал
 RUN mkdir -p /app/logs \
     && touch /app/logs/error.log /app/logs/info.log \
-    && chown -R appuser:appuser /app/logs
-
-# Создаём пользователя для запуска приложения
-RUN useradd --create-home --shell /bin/bash appuser \
     && chown -R appuser:appuser /app
+
+# Переключаемся на пользователя
 USER appuser
 
 # Экспонируем порт Daphne
