@@ -7,7 +7,7 @@ LABEL maintainer="you@example.com"
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
-# Установим системные зависимости, необходимые для Pillow, ffmpeg (опционально), build tools
+# Установим системные зависимости
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
     gcc \
@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     ffmpeg \
     && rm -rf /var/lib/apt/lists/*
 
-# Создаём пользователя ДО копирования проекта
+# Создаём пользователя до копирования проекта
 RUN useradd --create-home --shell /bin/bash appuser
 
 # Рабочая директория приложения
@@ -33,12 +33,10 @@ RUN pip install --upgrade pip && pip install -r /app/requirements.txt
 # Копируем проект в контейнер
 COPY . /app
 
-# Создаём папку logs и файлы логов, чтобы Django не падал
+# Создаём папку logs и файлы логов, чтобы Django не падал, и меняем владельца на appuser
 RUN mkdir -p /app/logs \
-    && touch /app/logs/error.log /app/logs/info.log
-
-# Делаем entrypoint исполняемым и меняем владельца файлов на appuser
-RUN chmod +x /app/docker/entrypoint.sh \
+    && touch /app/logs/error.log /app/logs/info.log \
+    && chmod +x /app/docker/entrypoint.sh \
     && chown -R appuser:appuser /app
 
 # Переключаемся на пользователя
