@@ -18,6 +18,9 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     ffmpeg \
     && rm -rf /var/lib/apt/lists/*
 
+# Создаём пользователя ДО копирования проекта
+RUN useradd --create-home --shell /bin/bash appuser
+
 # Рабочая директория приложения
 WORKDIR /app
 
@@ -27,15 +30,15 @@ COPY requirements.txt /app/requirements.txt
 # Устанавливаем зависимости
 RUN pip install --upgrade pip && pip install -r /app/requirements.txt
 
-# --- Создаём пользователя ДО chown ---
-RUN useradd --create-home --shell /bin/bash appuser
-
 # Копируем проект в контейнер
 COPY . /app
 
 # Создаём папку logs и файлы логов, чтобы Django не падал
 RUN mkdir -p /app/logs \
-    && touch /app/logs/error.log /app/logs/info.log \
+    && touch /app/logs/error.log /app/logs/info.log
+
+# Делаем entrypoint исполняемым и меняем владельца файлов на appuser
+RUN chmod +x /app/docker/entrypoint.sh \
     && chown -R appuser:appuser /app
 
 # Переключаемся на пользователя
@@ -43,10 +46,6 @@ USER appuser
 
 # Экспонируем порт Daphne
 EXPOSE 8000
-
-# Копируем и делаем исполняемым entrypoint
-COPY ./docker/entrypoint.sh /app/docker/entrypoint.sh
-RUN chmod +x /app/docker/entrypoint.sh
 
 # По умолчанию запускаем entrypoint
 ENTRYPOINT ["/app/docker/entrypoint.sh"]
