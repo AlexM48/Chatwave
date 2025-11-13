@@ -1,0 +1,262 @@
+[2025-10-18 14:04:32,921] INFO mychat User Sasha отправил сообщение в room 5 type: text
+[2025-10-18 14:04:42,077] INFO mychat User Sasha отправил сообщение в room 5 type: image
+[2025-10-18 14:04:50,437] INFO mychat User Sasha отправил сообщение в room 5 type: video
+[2025-10-18 14:05:00,561] INFO mychat User Sasha отправил сообщение в room 5 type: image
+[2025-10-18 14:08:17,701] INFO mychat User Sasha отправил сообщение в room 5 type: image
+[2025-10-18 14:08:51,213] INFO mychat User Sasha отправил сообщение в room 6 type: image
+[2025-10-18 14:09:12,935] INFO mychat User Sasha отправил сообщение в room 6 type: text
+[2025-10-18 14:10:26,240] INFO mychat User Sasha отправил сообщение в room 6 type: image
+[2025-10-18 14:10:56,961] INFO mychat User Sasha отправил сообщение в room 6 type: image
+[2025-10-18 14:14:13,801] INFO mychat User Sasha отправил сообщение в room 6 type: image
+[2025-10-18 14:14:25,730] INFO mychat User Sasha отправил сообщение в room 6 type: image
+[2025-10-18 14:16:02,282] INFO mychat User Sasha отправил сообщение в room 6 type: image
+[2025-10-18 14:18:34,075] INFO mychat User Sasha отправил сообщение в room 6 type: image
+[2025-10-18 14:20:52,709] INFO mychat User Sasha отправил сообщение в room 6 type: image
+[2025-10-19 11:01:27,707] INFO mychat.consumers WebSocket CONNECT user=Sasha room_id=4
+[2025-10-19 11:01:59,608] INFO mychat.consumers WebSocket CONNECT user=Sasha room_id=4
+[2025-10-19 11:02:01,911] INFO mychat.consumers Получено действие=delete от user=Sasha
+[2025-10-19 11:02:01,967] INFO mychat.consumers Сообщение id=40 удалено пользователем=Sasha
+[2025-10-19 11:02:03,595] INFO mychat.consumers WebSocket DISCONNECT user=Sasha code=1001
+[2025-10-19 11:02:03,679] INFO mychat.consumers WebSocket CONNECT user=Sasha room_id=4
+[2025-10-19 11:02:05,544] INFO mychat.consumers Получено действие=delete от user=Sasha
+[2025-10-19 11:02:05,596] INFO mychat.consumers Сообщение id=39 удалено пользователем=Sasha
+[2025-10-19 11:02:07,001] INFO mychat.consumers Получено действие=delete от user=Sasha
+[2025-10-19 11:02:07,027] INFO mychat.consumers Сообщение id=13 удалено пользователем=Sasha
+[2025-10-19 11:02:18,328] INFO mychat.consumers WebSocket CONNECT user=Sasha room_id=4
+[2025-10-19 11:02:19,336] INFO mychat.consumers Получено действие=delete от user=Sasha
+[2025-10-19 11:02:19,383] INFO mychat.consumers Сообщение id=10 удалено пользователем=Sasha
+[2025-10-19 11:02:23,481] INFO mychat.consumers Получено действие=delete от user=Sasha
+[2025-10-19 11:02:23,508] INFO mychat.consumers Сообщение id=11 удалено пользователем=Sasha
+[2025-10-19 11:04:52,572] INFO mychat.consumers WebSocket DISCONNECT user=Sasha code=1001
+[2025-10-19 11:04:53,918] INFO mychat.consumers WebSocket CONNECT user=Sasha room_id=6
+[2025-10-19 11:04:58,701] INFO mychat.consumers WebSocket DISCONNECT user=Sasha code=1001
+[2025-10-19 11:05:00,071] INFO mychat.consumers WebSocket CONNECT user=Sasha room_id=4
+[2025-10-19 11:05:11,017] INFO mychat.consumers WebSocket CONNECT user=Sasha room_id=4
+[2025-10-19 11:05:12,226] INFO mychat.consumers Получено действие=delete от user=Sasha
+[2025-10-19 11:05:12,273] INFO mychat.consumers Сообщение id=41 удалено пользователем=Sasha
+[2025-10-19 11:05:16,825] INFO mychat.consumers Получено действие=delete от user=Sasha
+[2025-10-19 11:05:16,853] INFO mychat.consumers Сообщение id=42 удалено пользователем=Sasha
+[2025-10-19 11:06:00,465] INFO mychat.consumers WebSocket CONNECT user=Sasha room_id=7
+[2025-10-19 11:06:15,662] WARNING mychat.consumers chat_message вызван без 'message': event={'type': 'chat_message', 'action': 'message', 'message_id': 44, 'username': 'Sasha', 'is_superuser': False, 'content': 'первое сообщение которое будет удалено, необходимо прорить лог', 'video_url': None, 'image_url': None}
+[2025-10-19 11:06:17,287] INFO mychat.consumers Получено действие=delete от user=Sasha
+[2025-10-19 11:06:17,337] INFO mychat.consumers Сообщение id=44 удалено пользователем=Sasha
+[2025-10-19 11:08:36,910] INFO mychat.consumers WebSocket DISCONNECT user=Sasha code=1001
+[2025-10-19 11:10:08,799] INFO mychat.consumers WebSocket CONNECT user=Sasha room_id=8
+[2025-10-19 11:10:19,405] WARNING mychat.consumers chat_message вызван без 'message': event={'type': 'chat_message', 'action': 'message', 'message_id': 45, 'username': 'Sasha', 'is_superuser': False, 'content': 'новое сообщение в тестовой комнате 2', 'video_url': None, 'image_url': None}
+[2025-10-19 11:10:21,060] INFO mychat.consumers Получено действие=delete от user=Sasha
+[2025-10-19 11:10:21,109] INFO mychat.consumers Сообщение id=45 удалено пользователем=Sasha
+[2025-10-19 11:10:23,698] INFO mychat.consumers WebSocket DISCONNECT user=Sasha code=1001
+[2025-10-19 11:10:23,765] INFO mychat.consumers WebSocket CONNECT user=Sasha room_id=8
+[2025-10-19 11:12:12,583] WARNING mychat.consumers chat_message вызван без 'message': event={'type': 'chat_message', 'action': 'message', 'message_id': 46, 'username': 'Sasha', 'is_superuser': False, 'content': 'проверяем ещё раз', 'video_url': None, 'image_url': None}
+[2025-10-19 11:12:14,777] INFO mychat.consumers Получено действие=delete от user=Sasha
+[2025-10-19 11:12:14,825] INFO mychat.consumers Сообщение id=46 удалено пользователем=Sasha
+[2025-10-19 11:15:51,279] WARNING mychat.consumers chat_message вызван без 'message': event={'type': 'chat_message', 'action': 'message', 'message_id': 47, 'username': 'Sasha', 'is_superuser': False, 'content': 'снова новое сообщение', 'video_url': None, 'image_url': None}
+[2025-10-19 11:16:18,195] INFO mychat.consumers WebSocket CONNECT user=Sasha room_id=8
+[2025-10-19 11:16:20,895] INFO mychat.consumers Получено действие=delete от user=Sasha
+[2025-10-19 11:16:20,944] INFO mychat.consumers Сообщение id=47 удалено пользователем=Sasha
+[2025-10-19 11:16:55,381] INFO mychat.consumers WebSocket DISCONNECT user=Sasha code=1001
+[2025-10-19 11:16:55,454] INFO mychat.consumers WebSocket CONNECT user=Sasha room_id=8
+[2025-10-19 11:17:08,417] INFO mychat.consumers WebSocket DISCONNECT user=Sasha code=1001
+[2025-10-19 11:17:09,482] INFO mychat.consumers WebSocket CONNECT user=Sasha room_id=8
+[2025-10-19 11:17:17,450] INFO mychat.consumers WebSocket DISCONNECT user=Sasha code=1001
+[2025-10-19 11:17:17,517] INFO mychat.consumers WebSocket CONNECT user=Sasha room_id=8
+[2025-10-19 11:17:19,142] INFO mychat.consumers Получено действие=delete от user=Sasha
+[2025-10-19 11:17:19,189] INFO mychat.consumers Сообщение id=49 удалено пользователем=Sasha
+[2025-10-19 11:17:20,690] INFO mychat.consumers WebSocket DISCONNECT user=Sasha code=1001
+[2025-10-19 11:17:20,759] INFO mychat.consumers WebSocket CONNECT user=Sasha room_id=8
+[2025-10-19 11:19:08,996] INFO mychat.consumers WebSocket DISCONNECT user=Sasha code=1001
+[2025-10-19 11:19:52,147] INFO mychat.consumers WebSocket CONNECT user=Sasha room_id=8
+[2025-10-19 16:08:02,694] WARNING mychat User Sasha попытался отправить пустое сообщение в room 8
+[2025-10-19 16:08:14,808] WARNING mychat User Sasha попытался отправить пустое сообщение в room 8
+[2025-10-19 16:23:01,061] WARNING mychat User Sasha попытался отправить пустое сообщение в room 8
+[2025-10-19 16:24:53,453] WARNING mychat User Sasha попытался отправить пустое сообщение в room 8
+[2025-10-19 16:25:34,131] WARNING mychat User Sasha попытался отправить пустое сообщение в room 8
+[2025-10-19 16:28:13,952] INFO mychat User Sasha отправил сообщение в room 8 type: text
+[2025-10-19 16:28:18,190] INFO mychat User Sasha отправил сообщение в room 8 type: text
+[2025-10-19 16:28:23,470] INFO mychat User Sasha отправил сообщение в room 8 type: text
+[2025-10-19 16:30:10,125] INFO mychat User Sasha отправил сообщение в room 8 type: text
+[2025-10-19 16:30:20,388] INFO mychat User Sasha отправил сообщение в room 8 type: text
+[2025-10-19 16:30:41,690] INFO mychat User admin отправил сообщение в room 8 type: text
+[2025-10-19 16:33:21,329] INFO mychat User admin отправил сообщение в room 8 type: text
+[2025-10-19 16:34:39,584] INFO mychat User admin отправил сообщение в room 8 type: text
+[2025-10-19 16:34:43,768] INFO mychat User admin отправил сообщение в room 8 type: text
+[2025-10-19 16:36:04,942] INFO mychat User admin отправил сообщение в room 8 type: text
+[2025-10-19 16:36:11,591] INFO mychat User admin отправил сообщение в room 8 type: text
+[2025-10-19 16:37:51,823] INFO mychat User admin отправил сообщение в room 8 type: image
+[2025-10-19 16:38:12,815] INFO mychat User admin отправил сообщение в room 8 type: video
+[2025-10-19 16:42:50,360] WARNING mychat User admin попытался отправить пустое сообщение в room 8
+[2025-10-19 16:42:52,000] WARNING mychat User admin попытался отправить пустое сообщение в room 8
+[2025-10-19 16:42:52,143] WARNING mychat User admin попытался отправить пустое сообщение в room 8
+[2025-10-19 16:42:53,668] WARNING mychat User admin попытался отправить пустое сообщение в room 8
+[2025-10-19 16:42:56,432] WARNING mychat User admin попытался отправить пустое сообщение в room 8
+[2025-10-19 16:42:56,591] WARNING mychat User admin попытался отправить пустое сообщение в room 8
+[2025-10-19 16:42:56,733] WARNING mychat User admin попытался отправить пустое сообщение в room 8
+[2025-10-19 16:42:57,776] WARNING mychat User admin попытался отправить пустое сообщение в room 8
+[2025-10-19 16:42:57,911] WARNING mychat User admin попытался отправить пустое сообщение в room 8
+[2025-10-19 16:43:57,975] WARNING mychat User admin попытался отправить пустое сообщение в room 8
+[2025-10-20 12:49:34,428] WARNING mychat User admin попытался отправить пустое сообщение в room 9
+[2025-10-21 16:13:40,037] WARNING mychat User admin попытался отправить пустое сообщение в room 8
+[2025-10-21 16:13:41,773] WARNING mychat User admin попытался отправить пустое сообщение в room 8
+[2025-10-21 16:16:19,030] WARNING mychat User admin попытался отправить пустое сообщение в room 8
+[2025-10-21 16:16:20,372] WARNING mychat User admin попытался отправить пустое сообщение в room 8
+[2025-10-21 16:18:17,666] WARNING mychat User admin попытался отправить пустое сообщение в room 8
+[2025-10-21 16:23:09,010] WARNING mychat User admin попытался отправить пустое сообщение в room 8
+[2025-10-21 16:26:59,269] INFO mychat User admin отправил сообщение в room 8 type: text
+[2025-10-21 16:27:01,691] INFO mychat User admin отправил сообщение в room 8 type: text
+[2025-10-21 16:27:34,291] INFO mychat User admin отправил сообщение в room 8 type: text
+[2025-10-21 16:28:00,515] INFO mychat User admin отправил сообщение в room 8 type: text
+[2025-10-21 16:28:06,820] INFO mychat User admin отправил сообщение в room 8 type: image
+[2025-10-21 16:28:22,935] INFO mychat User admin отправил сообщение в room 9 type: video
+[2025-10-21 16:36:40,112] INFO mychat User admin отправил сообщение в room 9 type: text
+[2025-10-21 16:37:00,697] INFO mychat User Sasha отправил сообщение в room 9 type: text
+[2025-10-21 16:58:34,539] INFO mychat User Sasha отправил сообщение в room 9 type: text
+[2025-10-21 16:58:41,980] INFO mychat User Sasha отправил сообщение в room 9 type: text
+[2025-10-21 17:00:30,201] INFO mychat User Sasha отправил сообщение в room 9 type: text
+[2025-10-21 17:00:54,446] INFO mychat User Sasha отправил сообщение в room 9 type: text
+[2025-10-21 17:02:12,201] INFO mychat User Sasha отправил сообщение в room 10 type: text
+[2025-10-25 10:57:32,502] INFO mychat.consumers WebSocket CONNECT user=user room_id=7
+[2025-10-25 10:57:32,503] INFO mychat.consumers Получено действие=delete от user=user
+[2025-10-25 10:57:32,514] INFO mychat.consumers Сообщение id=2 удалено пользователем=user
+[2025-10-25 10:57:32,518] INFO mychat.consumers WebSocket DISCONNECT user=user code=1000
+[2025-10-25 10:57:33,561] INFO mychat.consumers WebSocket CONNECT user=user room_id=8
+[2025-10-25 10:57:33,561] INFO mychat.consumers Получено действие=send от user=user
+[2025-10-25 10:57:33,565] INFO mychat.consumers Создано сообщение id=3 пользователем=user
+[2025-10-25 10:57:33,568] INFO mychat.consumers WebSocket DISCONNECT user=user code=1000
+[2025-10-25 11:01:21,821] INFO mychat.consumers WebSocket CONNECT user=user room_id=7
+[2025-10-25 11:01:21,822] INFO mychat.consumers Получено действие=delete от user=user
+[2025-10-25 11:01:21,832] INFO mychat.consumers Сообщение id=2 удалено пользователем=user
+[2025-10-25 11:01:21,836] INFO mychat.consumers WebSocket DISCONNECT user=user code=1000
+[2025-10-25 11:01:22,811] INFO mychat.consumers WebSocket CONNECT user=user room_id=8
+[2025-10-25 11:01:22,811] INFO mychat.consumers Получено действие=send от user=user
+[2025-10-25 11:01:22,814] INFO mychat.consumers Создано сообщение id=3 пользователем=user
+[2025-10-25 11:01:22,818] INFO mychat.consumers WebSocket DISCONNECT user=user code=1000
+[2025-10-25 11:34:22,235] INFO mychat User Sasha открыл комнату id=10
+[2025-10-25 11:34:35,341] INFO mychat User Sasha открыл комнату id=10
+[2025-10-25 11:34:35,345] INFO mychat User Sasha отправил сообщение в room 10 type: text
+[2025-10-25 11:34:39,032] INFO mychat User Sasha открыл комнату id=10
+[2025-10-25 11:34:41,455] INFO mychat Сообщение id=77 удалено пользователем Sasha
+[2025-10-25 11:34:41,486] INFO mychat User Sasha открыл комнату id=10
+[2025-10-25 11:34:52,807] INFO mychat Комната 'создаю комнату для логирвоания' создана пользователем Sasha
+[2025-10-25 11:34:54,142] INFO mychat User Sasha открыл комнату id=13
+[2025-10-25 11:34:58,997] INFO mychat User Sasha открыл комнату id=13
+[2025-10-25 11:34:59,007] INFO mychat User Sasha отправил сообщение в room 13 type: text
+[2025-10-25 11:35:03,243] INFO mychat Комната 'создаю комнату для логирвоания' (id=13) удалена пользователем Sasha
+[2025-10-25 11:43:31,778] INFO mychat User Sasha открыл комнату id=8
+[2025-10-25 11:43:40,476] INFO mychat User Sasha открыл комнату id=5
+[2025-10-25 11:43:51,787] INFO mychat Сообщение id=28 удалено пользователем Sasha
+[2025-10-25 11:43:51,823] INFO mychat User Sasha открыл комнату id=5
+[2025-10-25 11:43:59,024] INFO mychat User Sasha открыл комнату id=5
+[2025-10-25 11:44:31,669] INFO mychat User Sasha открыл комнату id=10
+[2025-10-25 11:49:00,880] INFO mychat User Sasha открыл комнату id=10
+[2025-10-25 11:49:38,587] INFO mychat User Sasha открыл комнату id=10
+[2025-10-25 11:49:38,591] INFO mychat User Sasha отправил сообщение в room 10 type: video
+[2025-10-25 11:49:41,678] INFO mychat User Sasha открыл комнату id=10
+[2025-10-25 11:49:58,496] INFO mychat Сообщение id=80 удалено пользователем Sasha
+[2025-10-25 11:49:58,530] INFO mychat User Sasha открыл комнату id=10
+[2025-10-25 11:50:02,500] INFO mychat User Sasha открыл комнату id=6
+[2025-10-25 11:50:04,923] INFO mychat User Sasha открыл комнату id=8
+[2025-10-25 11:51:45,299] INFO mychat User Sasha открыл комнату id=10
+[2025-10-25 11:52:14,128] INFO mychat User admin открыл комнату id=5
+[2025-10-25 19:50:45,404] INFO mychat User admin открыл комнату id=10
+[2025-10-25 19:51:07,954] INFO mychat User admin открыл комнату id=10
+[2025-10-25 19:51:07,960] INFO mychat User admin отправил сообщение в room 10 type: video
+[2025-10-25 19:51:13,684] INFO mychat User admin открыл комнату id=10
+[2025-10-25 19:51:15,872] INFO mychat Сообщение id=81 удалено пользователем admin
+[2025-10-25 19:51:15,905] INFO mychat User admin открыл комнату id=10
+[2025-10-25 20:00:14,664] INFO mychat User admin открыл комнату id=10
+[2025-10-25 20:00:17,433] INFO mychat User admin открыл комнату id=10
+[2025-10-25 20:00:17,436] INFO mychat User admin отправил сообщение в room 10 type: text
+[2025-10-25 20:00:21,655] INFO mychat User admin открыл комнату id=10
+[2025-10-25 20:00:21,660] INFO mychat User admin отправил сообщение в room 10 type: text
+[2025-10-25 20:00:22,552] INFO mychat User admin открыл комнату id=10
+[2025-10-25 20:00:35,934] INFO mychat User admin открыл комнату id=10
+[2025-10-25 20:00:35,938] INFO mychat User admin отправил сообщение в room 10 type: video
+[2025-10-25 20:00:40,470] INFO mychat User admin открыл комнату id=10
+[2025-10-25 20:00:42,467] INFO mychat Сообщение id=84 удалено пользователем admin
+[2025-10-25 20:00:42,502] INFO mychat User admin открыл комнату id=10
+[2025-10-25 20:03:31,242] INFO mychat User admin открыл комнату id=5
+[2025-10-25 20:03:36,407] INFO mychat User admin открыл комнату id=5
+[2025-10-25 20:03:36,408] INFO mychat User admin отправил сообщение в room 5 type: text
+[2025-10-25 20:05:34,862] INFO mychat User admin открыл комнату id=5
+[2025-10-25 20:05:43,789] INFO mychat User admin открыл комнату id=5
+[2025-10-25 20:05:46,827] INFO mychat User admin открыл комнату id=5
+[2025-10-25 20:05:47,331] INFO mychat User admin открыл комнату id=5
+[2025-10-25 20:05:48,943] INFO mychat User admin открыл комнату id=5
+[2025-10-25 20:05:54,910] INFO mychat User admin открыл комнату id=5
+[2025-10-25 20:05:56,501] INFO mychat User admin открыл комнату id=5
+[2025-10-25 20:06:20,686] INFO mychat User admin открыл комнату id=5
+[2025-10-25 20:06:20,700] INFO mychat User admin отправил сообщение в room 5 type: video
+[2025-10-25 20:06:33,655] INFO mychat User admin открыл комнату id=5
+[2025-10-25 20:06:35,733] INFO mychat User admin открыл комнату id=5
+[2025-10-25 20:06:35,965] INFO mychat User admin открыл комнату id=5
+[2025-10-25 20:06:36,672] INFO mychat User admin открыл комнату id=5
+[2025-10-25 20:13:24,476] INFO mychat User admin открыл комнату id=5
+[2025-10-25 20:13:34,018] INFO mychat User admin открыл комнату id=5
+[2025-10-25 20:13:36,214] INFO mychat User admin открыл комнату id=5
+[2025-10-25 20:13:38,928] INFO mychat User admin открыл комнату id=5
+[2025-10-25 20:13:39,940] INFO mychat User admin открыл комнату id=5
+[2025-10-25 20:14:14,476] INFO mychat User admin открыл комнату id=10
+[2025-10-25 20:14:22,302] INFO mychat User admin открыл комнату id=10
+[2025-10-25 20:14:23,276] INFO mychat User admin открыл комнату id=10
+[2025-10-25 20:14:23,442] INFO mychat User admin открыл комнату id=10
+[2025-10-25 20:22:11,406] INFO mychat User admin открыл комнату id=10
+[2025-10-25 20:22:19,029] INFO mychat User admin открыл комнату id=10
+[2025-10-25 20:22:21,103] INFO mychat User admin открыл комнату id=10
+[2025-10-25 20:22:21,274] INFO mychat User admin открыл комнату id=10
+[2025-10-25 20:22:26,981] INFO mychat User admin открыл комнату id=10
+[2025-10-25 20:22:27,255] INFO mychat User admin открыл комнату id=10
+[2025-10-25 20:22:27,362] INFO mychat User admin открыл комнату id=10
+[2025-10-25 20:22:27,451] INFO mychat User admin открыл комнату id=10
+[2025-10-25 20:22:27,452] WARNING mychat User admin попытался отправить пустое сообщение в room 10
+[2025-10-25 20:22:31,152] INFO mychat User admin открыл комнату id=10
+[2025-10-25 20:22:31,158] INFO mychat User admin отправил сообщение в room 10 type: text
+[2025-10-25 20:22:37,328] INFO mychat User admin открыл комнату id=10
+[2025-10-25 20:22:37,345] INFO mychat User admin отправил сообщение в room 10 type: video
+[2025-10-25 20:23:12,725] INFO mychat User admin открыл комнату id=10
+[2025-10-25 20:23:13,329] INFO mychat User admin открыл комнату id=10
+[2025-10-25 20:23:13,511] INFO mychat User admin открыл комнату id=10
+[2025-10-25 20:23:15,533] INFO mychat User admin открыл комнату id=5
+[2025-10-25 20:23:22,395] INFO mychat User admin открыл комнату id=5
+[2025-10-25 20:36:05,608] INFO mychat User admin открыл комнату id=5
+[2025-10-25 20:36:13,949] INFO mychat User admin открыл комнату id=5
+[2025-10-25 20:36:15,833] INFO mychat User admin открыл комнату id=5
+[2025-10-25 20:36:16,024] INFO mychat User admin открыл комнату id=5
+[2025-10-25 20:37:19,714] INFO mychat User admin открыл комнату id=5
+[2025-10-25 20:43:58,646] INFO mychat User admin открыл комнату id=5
+[2025-10-25 20:44:14,890] INFO mychat User admin открыл комнату id=5
+[2025-11-03 07:56:24,947] INFO mychat User admin открыл комнату id=10
+[2025-11-03 07:57:05,336] INFO mychat User admin открыл комнату id=10
+[2025-11-03 07:57:05,350] INFO mychat User admin отправил сообщение в room 10 type: text
+[2025-11-03 07:57:07,620] INFO mychat User admin открыл комнату id=10
+[2025-11-03 07:57:13,530] INFO mychat User admin открыл комнату id=5
+[2025-11-03 07:57:33,285] INFO mychat User admin открыл комнату id=10
+[2025-11-03 08:51:41,816] INFO mychat User admin открыл комнату id=10
+[2025-11-03 08:51:44,975] INFO mychat User admin открыл комнату id=5
+[2025-11-03 08:51:49,207] INFO mychat User admin открыл комнату id=8
+[2025-11-03 12:14:10,386] INFO mychat User admin открыл комнату id=5
+[2025-11-03 12:14:20,406] INFO mychat User admin открыл комнату id=5
+[2025-11-03 12:14:20,414] INFO mychat User admin отправил сообщение в room 5 type: text
+[2025-11-03 12:14:20,440] INFO mychat User admin открыл комнату id=5
+[2025-11-03 12:15:04,930] INFO mychat User admin открыл комнату id=5
+[2025-11-03 12:16:14,985] INFO mychat User admin открыл комнату id=10
+[2025-11-03 12:16:20,735] INFO mychat User admin открыл комнату id=10
+[2025-11-03 12:16:26,251] INFO mychat User admin открыл комнату id=10
+[2025-11-03 12:16:35,793] INFO mychat Комната 'комната' создана пользователем admin
+[2025-11-03 12:16:37,071] INFO mychat User admin открыл комнату id=14
+[2025-11-03 12:16:39,373] INFO mychat User admin открыл комнату id=14
+[2025-11-03 12:16:39,379] INFO mychat User admin отправил сообщение в room 14 type: text
+[2025-11-03 12:16:39,405] INFO mychat User admin открыл комнату id=14
+[2025-11-03 12:16:44,182] INFO mychat User admin открыл комнату id=14
+[2025-11-03 12:32:39,800] INFO mychat User admin открыл комнату id=14
+[2025-11-03 12:32:44,089] INFO mychat User admin открыл комнату id=14
+[2025-11-03 12:32:55,988] INFO mychat User admin открыл комнату id=14
+[2025-11-03 12:32:55,992] INFO mychat User admin отправил сообщение в room 14 type: text
+[2025-11-03 12:32:56,015] INFO mychat User admin открыл комнату id=14
+[2025-11-08 11:23:46,436] INFO mychat User admin открыл комнату id=5
+[2025-11-08 11:23:58,351] INFO mychat User admin открыл комнату id=5
+[2025-11-08 11:23:58,359] INFO mychat User admin отправил сообщение в room 5 type: text
+[2025-11-08 11:23:58,387] INFO mychat User admin открыл комнату id=5
+[2025-11-12 15:42:02,176] INFO mychat User admin открыл комнату id=5
+[2025-11-12 15:42:10,765] INFO mychat User admin открыл комнату id=5
+[2025-11-12 15:42:10,773] INFO mychat User admin отправил сообщение в room 5 type: text
+[2025-11-12 15:42:10,796] INFO mychat User admin открыл комнату id=5
