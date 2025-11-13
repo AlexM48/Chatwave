@@ -32,7 +32,8 @@ services:
     command: >
       daphne -b 0.0.0.0 -p 8000 chatwave.asgi:application
     volumes:
-      - .:/app
+      - .:/app                  # Код приложения
+      - chatwave_logs:/app/logs # Отдельный volume для логов
     env_file:
       - .env
     depends_on:
@@ -57,3 +58,4 @@ services:
 volumes:
   postgres_data:
   redis_data:
+  chatwave_logs:   # Новый volume для логов
