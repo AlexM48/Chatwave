@@ -1,6 +1,6 @@
 # Dockerfile
-# Базовый образ Python. Можно поменять на python:3.12-slim-bullseye (в зависимости от ОС).
-FROM python:3.12-slim
+# Базовый образ Python
+FROM python:3.12-slim-bullseye
 
 # Метаданные
 LABEL maintainer="you@example.com"
@@ -15,34 +15,40 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     netcat-openbsd \
     gettext \
-    ffmpeg \            
+    ffmpeg \
     && rm -rf /var/lib/apt/lists/*
 
 # Рабочая директория приложения
 WORKDIR /app
 
-# Копируем зависимости заранее (для использования docker cache)
+# Копируем зависимости заранее (для кэширования)
 COPY requirements.txt /app/requirements.txt
 
-# Установим pip зависимости
-RUN pip install --upgrade pip
-RUN pip install -r /app/requirements.txt
+# Устанавливаем зависимости
+RUN pip install --upgrade pip && pip install -r /app/requirements.txt
 
 # Копируем проект в контейнер
 COPY . /app
 
-# Создаём пользователя для запуска приложения (security)
-RUN useradd --create-home --shell /bin/bash appuser && chown -R appuser:appuser /app
+# Создаём папку logs и файлы логов, чтобы Django не падал
+RUN mkdir -p /app/logs \
+    && touch /app/logs/error.log /app/logs/info.log \
+    && chown -R appuser:appuser /app/logs
+
+# Создаём пользователя для запуска приложения
+RUN useradd --create-home --shell /bin/bash appuser \
+    && chown -R appuser:appuser /app
 USER appuser
 
-# Экспонируем порт Daphne (в контейнере)
+# Экспонируем порт Daphne
 EXPOSE 8000
 
 # Копируем и делаем исполняемым entrypoint
 COPY ./docker/entrypoint.sh /app/docker/entrypoint.sh
-#RUN chmod +x /app/docker/entrypoint.sh
+RUN chmod +x /app/docker/entrypoint.sh
 
-# По-умолчанию запускаем entrypoint (migrations, collectstatic, запуск сервера)
+# По умолчанию запускаем entrypoint
 ENTRYPOINT ["/app/docker/entrypoint.sh"]
-# Запускаем daphne внутри entrypoint
+
+# Запускаем Daphne внутри entrypoint
 CMD ["daphne", "-b", "0.0.0.0", "-p", "8000", "chatwave.asgi:application"]
